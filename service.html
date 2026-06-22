@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ワイズネックス合同会社のECコンサルティングサービス詳細。楽天市場・ヤフーショッピング・Shopeeなど対応。完全成果報酬プランあり。">
+  <title>サービス内容 | ワイズネックス合同会社</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a3a5c;
+      --accent: #2a7abf;
+      --accent-light: #e8f3fb;
+      --text: #222;
+      --text-muted: #666;
+      --border: #dde3e9;
+      --bg: #ffffff;
+      --section-bg: #f7f9fb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Yu Gothic", sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--bg);
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo a {
+      display: block;
+      text-decoration: none;
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: .9rem;
+      margin-left: 1.8rem;
+      letter-spacing: .03em;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #245c8a 60%, var(--accent) 100%);
+      color: #fff;
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: .05em;
+      margin-bottom: .6rem;
+    }
+
+    .page-hero p {
+      font-size: 1rem;
+      opacity: .85;
+    }
+
+    /* ========== SECTION COMMON ========== */
+    section { padding: 70px 5%; }
+    section:nth-child(even) { background: var(--section-bg); }
+
+    .section-inner { max-width: 860px; margin: 0 auto; }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: .85rem;
+      margin-bottom: 2rem;
+      letter-spacing: .04em;
+    }
+
+    /* ========== FEATURE ========== */
+    .feature-box {
+      background: var(--accent-light);
+      border: 1px solid #b8d9ef;
+      border-radius: 10px;
+      padding: 2rem 2.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .feature-box p { color: var(--text-muted); }
+
+    /* ========== MALLS ========== */
+    .mall-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .mall-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.4rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+
+    .mall-icon { font-size: 1.8rem; margin-bottom: .5rem; }
+
+    /* ========== FLOW ========== */
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.4rem;
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .flow-item:last-child { padding-bottom: 0; }
+
+    .flow-item:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 46px;
+      width: 2px;
+      height: calc(100% - 20px);
+      background: var(--border);
+    }
+
+    .flow-num {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flow-content h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: .3rem;
+      padding-top: .6rem;
+    }
+
+    .flow-content p { font-size: .92rem; color: var(--text-muted); }
+
+    /* ========== PRICING ========== */
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .plan-card {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem 1.8rem;
+      background: #fff;
+      transition: box-shadow .2s, border-color .2s;
+    }
+
+    .plan-card:hover {
+      box-shadow: 0 6px 24px rgba(26,58,92,.1);
+      border-color: var(--accent);
+    }
+
+    .plan-card.featured {
+      border-color: var(--accent);
+      position: relative;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: .25rem 1rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .plan-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: .8rem;
+    }
+
+    .plan-price {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: .8rem;
+    }
+
+    .plan-card p { font-size: .92rem; color: var(--text-muted); }
+
+    /* ========== CTA ========== */
+    #cta { text-align: center; }
+
+    .cta-box {
+      background: var(--accent-light);
+      border: 1px solid #b8d9ef;
+      border-radius: 10px;
+      padding: 2.8rem 2rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+
+    .cta-box a.mail-link {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 1.6rem;
+      letter-spacing: .03em;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .8rem 2.4rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      transition: background .2s, transform .15s;
+    }
+    .btn:hover { background: #1d6aa8; transform: translateY(-2px); }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,.75);
+      text-align: center;
+      padding: 2rem 5%;
+      font-size: .85rem;
+    }
+
+    footer strong { color: #fff; }
+
+    footer a { color: rgba(255,255,255,.75); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .feature-box { padding: 1.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Y's NEX ロゴ" style="height:84px; display:block;">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">トップ</a>
+    <a href="index.html#company">会社概要</a>
+    <a href="index.html#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<!-- ========== PAGE HERO ========== -->
+<div class="page-hero">
+  <h1>サービス内容</h1>
+  <p>ECビジネスの成長を、成果にコミットして支援します。</p>
+</div>
+
+<!-- ========== 特徴 ========== -->
+<section id="feature">
+  <div class="section-inner">
+    <h2 class="section-title">ワイズネックスが選ばれる理由</h2>
+    <div class="feature-box">
+      <h3>完全成果報酬でリスクゼロ</h3>
+      <p>成果報酬プランでは、売上が上がった分に対してのみ費用が発生します。初期費用・固定費ゼロで始められるため、リスクなくECサイトの運営改善をスタートできます。</p>
+    </div>
+    <div class="feature-box">
+      <h3>複数モール対応の一元サポート</h3>
+      <p>楽天市場・ヤフーショッピング・Shopeeなど、複数のECモールに対応。各モールの特性を熟知したコンサルタントが、最適な戦略で売上最大化を目指します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 対応モール ========== -->
+<section id="malls">
+  <div class="section-inner">
+    <h2 class="section-title">対応モール</h2>
+    <div class="mall-grid">
+      <div class="mall-card">
+        <div class="mall-icon">🛒</div>
+        楽天市場
+      </div>
+      <div class="mall-card">
+        <div class="mall-icon">🛍️</div>
+        ヤフーショッピング
+      </div>
+      <div class="mall-card">
+        <div class="mall-icon">🌏</div>
+        Shopee
+      </div>
+      <div class="mall-card">
+        <div class="mall-icon">➕</div>
+        その他応相談
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 支援の流れ ========== -->
+<section id="flow">
+  <div class="section-inner">
+    <h2 class="section-title">支援の流れ</h2>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-num">1</div>
+        <div class="flow-content">
+          <h3>お問い合わせ</h3>
+          <p>メールにてお気軽にご連絡ください。現状の課題やご要望をお聞かせください。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">2</div>
+        <div class="flow-content">
+          <h3>オンライン面談</h3>
+          <p>ZoomやGoogle Meetにて無料でヒアリングを実施。貴社のビジネス状況・目標を詳しくお伺いします。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">3</div>
+        <div class="flow-content">
+          <h3>ご提案・合意</h3>
+          <p>面談内容をもとに最適な支援プランをご提案します。内容・条件にご納得いただいてから次のステップへ進みます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">4</div>
+        <div class="flow-content">
+          <h3>契約締結</h3>
+          <p>合意した内容をもとに業務委託契約を締結します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">5</div>
+        <div class="flow-content">
+          <h3>運営代行開始</h3>
+          <p>契約締結後、速やかにEC運営サポートを開始します。定期的な報告・改善提案を行いながら売上拡大を目指します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 料金プラン ========== -->
+<section id="pricing">
+  <div class="section-inner">
+    <h2 class="section-title">料金プラン</h2>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <h3>定額プラン</h3>
+        <div class="plan-price">月額固定費用</div>
+        <p>毎月一定の費用でEC運営をサポートします。安定した支援体制を求める方におすすめです。料金はご相談ください。</p>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">おすすめ</div>
+        <h3>完全成果報酬プラン</h3>
+        <div class="plan-price">初期費用・固定費ゼロ</div>
+        <p>発生した利益に対して、役務内容に応じた料率を設定します。リスクなく始めたい方に最適なプランです。料率は応相談。</p>
+      </div>
+    </div>
+    <p style="margin-top:1.4rem; font-size:.88rem; color:var(--text-muted); text-align:center;">※ 詳細はお問い合わせのうえ、個別にご相談ください。</p>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section id="cta">
+  <div class="section-inner">
+    <h2 class="section-title" style="text-align:left;">まずはお気軽にご相談ください</h2>
+    <div class="cta-box">
+      <p>ECサイトの運営でお困りのことがあれば、<br>どんな小さなことでもお気軽にご連絡ください。</p>
+      <a class="mail-link" href="mailto:info@ysnex.com">info@ysnex.com</a><br>
+      <a class="btn" href="mailto:info@ysnex.com">メールで問い合わせる</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p><strong>ワイズネックス合同会社</strong></p>
+  <p style="margin-top:.4rem;">〒272-0023　千葉県市川市市川2-23-2</p>
+  <p style="margin-top:.8rem;">
+    <a href="index.html">トップ</a>　|
+    <a href="index.html#tokusho">特定商取引法</a>　|
+    <a href="index.html#privacy">プライバシーポリシー</a>
+  </p>
+  <p style="margin-top:1rem;">&copy; 2018 YSNEX LLC. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
